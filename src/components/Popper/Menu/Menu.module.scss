@@ -1,0 +1,27 @@
+.menu-list {
+    // width: 220px;
+    padding: 6px 0;
+    .menu-item {
+        margin-left: 0;
+    }
+    background-color: var(--white);
+}
+.text {
+}
+.menu-item {
+    font-weight: 500;
+    width: 100%;
+    display: flex;
+    // justify-content: flex-start;
+    // align-items: center;
+    border-radius: 0;
+    &:hover {
+        background-color: var(--outline-black-hover);
+    }
+}
+.toggle {
+    font-size: xx-large;
+    position: absolute;
+    top: 133px;
+    left: 177px;
+}

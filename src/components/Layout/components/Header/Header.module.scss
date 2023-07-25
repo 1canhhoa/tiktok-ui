@@ -1,0 +1,113 @@
+.wrapper {
+    --search-border-radius: 92px;
+    --search-top-spacer: 9px;
+    --search-height: 46px;
+    height: var(--default-layout-header-height);
+    width: 100%;
+    box-shadow: 0 1px 1px #e2e2e2;
+    display: flex;
+    justify-content: center;
+}
+.inner {
+    height: 100%;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+.logo {
+    margin-top: 6px;
+}
+.search-result,
+.search {
+    width: 500px;
+}
+.search {
+    height: var(--search-height);
+    display: flex; //đẩy kịch input qua phải
+    background-color: #1618230f;
+    padding-left: 16px;
+    border-radius: var(--search-border-radius);
+    align-items: center; //căn giữa trên dưới
+    margin-left: 0;
+    position: relative;
+    border: 1.5px solid transparent;
+    input {
+        width: 380px;
+        height: 21px;
+        color: #161823;
+        padding: 12px 0;
+        font-size: 1rem;
+        background-color: transparent;
+        outline: none;
+        flex: 1; //đẩy kịch input qua phải
+        caret-color: var(--primary);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        height: calc(var(--search-height) - var(--search-top-spacer) * 2);
+        width: 1px;
+        top: var(--search-top-spacer);
+        right: 52px;
+        background-color: #d7d7d9;
+    }
+    &:hover {
+        border-color: #c5c6c9;
+        // background-color: #a6a7ab;
+    }
+}
+
+input:not(:placeholder-shown) ~ .search-btn {
+    color: #4d4e57;
+}
+
+.clear,
+.loading {
+    position: absolute;
+    right: 70px;
+    color: #a6a7ab;
+}
+.search-btn {
+    width: 52px;
+    height: 100%;
+    cursor: pointer;
+    color: #a6a7ab;
+    font-size: 1.2rem;
+    border-top-right-radius: var(--search-border-radius);
+    border-bottom-right-radius: var(--search-border-radius);
+    &:active {
+        background-color: #1618230f;
+    }
+}
+.search-title {
+    color: #616165;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-left: 12px;
+}
+.text-result {
+    padding: 15px 16px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+// action
+.faplus {
+    margin-right: 8px;
+}
+
+// custom riêng chọ nút getapp
+.custom-getapp {
+    color: violet;
+}
+
+.threedots {
+    font-size: 1.4rem;
+    margin-left: 16px;
+    margin-right: 20px;
+    padding: 0 8px;
+    background-color: transparent;
+}

@@ -3,9 +3,20 @@
 
 :root {
     --primary: #fe2c55;
+    --default-layout-header-height: 60px;
+    --default-layout-weight: 1150px;
+    --textColor: #333;
+    --white: #ffffff;
+    --black: #161823;
+    --primary-hover: #ef2a51;
+    --outline-primary-hover: #fff4f5;
+    --outline-black-hover: #f8f8f8;
+    --boder-outline-black: #1618231f;
 }
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -18,4 +29,15 @@ body {
     font-size: 0.8rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
+}
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a[href] {
+    color: var(--textColor);
+    text-decoration: none;
 }
