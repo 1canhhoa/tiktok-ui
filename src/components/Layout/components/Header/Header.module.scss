@@ -19,6 +19,7 @@
 }
 .logo {
     margin-top: 6px;
+    width: 300px;
 }
 .search-result,
 .search {
@@ -94,11 +95,36 @@ input:not(:placeholder-shown) ~ .search-btn {
     font-weight: 400;
 }
 
-// action
+//action
+.action {
+    display: flex;
+    align-items: center;
+    // font-size: 1.1rem;
+    padding: 4px 12px;
+}
 .faplus {
     margin-right: 8px;
 }
-
+.faPaperPlane {
+    font-size: 1.3rem;
+    margin-left: 18px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+.faBell {
+    font-size: 1.3rem;
+    margin-left: 18px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 22px;
+    cursor: pointer;
+}
 // custom riêng chọ nút getapp
 .custom-getapp {
     color: violet;
@@ -110,4 +136,16 @@ input:not(:placeholder-shown) ~ .search-btn {
     margin-right: 20px;
     padding: 0 8px;
     background-color: transparent;
+    cursor: pointer;
+}
+//
+.faPaperPlane {
+    background-color: transparent;
+}
+.faBell {
+    background-color: transparent;
+}
+
+.tippy {
+    inset: 0px auto auto 0px;
 }

@@ -1,27 +1,50 @@
+// index.js
 .menu-list {
-    // width: 220px;
     padding: 6px 0;
     .menu-item {
         margin-left: 0;
     }
     background-color: var(--white);
 }
-.text {
+.tippy-menu {
+    inset: 0px -12px auto auto;
 }
+// MenuItem.js
 .menu-item {
+    position: relative;
+    line-height: 1.2rem;
     font-weight: 500;
     width: 100%;
     display: flex;
-    // justify-content: flex-start;
-    // align-items: center;
     border-radius: 0;
     &:hover {
         background-color: var(--outline-black-hover);
     }
+    &.separate {
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
+    }
 }
-.toggle {
-    font-size: xx-large;
-    position: absolute;
-    top: 133px;
-    left: 177px;
+
+// Header.js
+.header {
+    position: relative;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    margin-top: -8px;
+}
+
+.chevronleft {
+    width: 50px;
+    background-color: transparent;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.header-title {
+    font-weight: normal;
+    margin-left: 11px;
+    left: 50%;
+    top: 50%;
+    font-size: 1.1rem;
 }

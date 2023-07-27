@@ -46,7 +46,7 @@ function Button({
     return (
         <Comp
             className={cx('wrapper', {
-                [className]: className,
+                [className]: className, //custom rieng
                 primary,
                 outlinePrimary,
                 outlineBlack,
@@ -59,7 +59,7 @@ function Button({
         >
             {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
             <span className={cx('text')}>{children}</span>
-            {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
+            {rightIcon && <span className={cx('iconright')}>{rightIcon}</span>}
         </Comp>
     );
 }

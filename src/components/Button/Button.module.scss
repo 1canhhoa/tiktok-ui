@@ -4,6 +4,7 @@
     // justify-content: center;
     font-size: 1rem;
     font-weight: 500;
+    font-family: 'TikTokFont', sans-serif;
     min-width: 100px;
     padding: 9px 16px;
     border-radius: 6px;
@@ -59,14 +60,14 @@
     min-width: 208px;
     padding: 14px 78px;
 }
-.icon + .text + .icon {
+.icon + .text + .iconright {
     flex: 1;
 }
 .icon + .text,
-.text + .icon {
-    margin-left: 20px;
+.text + .iconright {
+    margin-left: 12px;
 }
-.text + .icon {
+.text + .iconright {
     font-size: xx-large;
     justify-content: space-between;
     margin-left: 45px;
@@ -75,6 +76,11 @@
 .icon {
     width: 24px;
     text-align: center;
+}
+.iconright {
+    position: absolute;
+    top: 2px;
+    right: 8px;
 }
 .text {
     line-height: 100%;
