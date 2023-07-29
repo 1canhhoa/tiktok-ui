@@ -1,10 +1,14 @@
 .wrapper {
-    // width: 100%;
+    width: 100%;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px;
     border-radius: 8px;
-    min-height: 100px;
-    // max-height: min((100vh - 96px) - 60px, 734px);
-    padding: 8px 4px 8px 0;
-    position: relative;
-    width: 230px;
+    // min-width: 100px;
+    padding: 8px 0 8px 0;
+    // thanh cuộn menu
+    max-height: min((100vh - 96px) - 60px, 734px);
+    display: flex;
+    flex-direction: column;
+    // khi trình duyệt co vào ô searchresult thì ô searchresult sẽ co theo
+    overflow: hidden auto;
+    overflow-x: hidden;
 }

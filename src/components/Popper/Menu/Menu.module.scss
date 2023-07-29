@@ -1,13 +1,17 @@
 // index.js
 .menu-list {
-    padding: 6px 0;
+    margin-top: 8px;
+    width: 230px;
+    background-color: var(--white);
+    border-radius: 6px;
     .menu-item {
         margin-left: 0;
     }
-    background-color: var(--white);
 }
-.tippy-menu {
-    inset: 0px -12px auto auto;
+// thanh cuộn menu
+.menu-body {
+    overflow-y: auto;
+    // overflow-y:;
 }
 // MenuItem.js
 .menu-item {
@@ -32,6 +36,7 @@
     height: 50px;
     align-items: center;
     margin-top: -8px;
+    flex-shrink: 0;
 }
 
 .chevronleft {
@@ -43,8 +48,5 @@
 
 .header-title {
     font-weight: normal;
-    margin-left: 11px;
-    left: 50%;
-    top: 50%;
     font-size: 1.1rem;
 }

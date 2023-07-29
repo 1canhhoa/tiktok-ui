@@ -8,10 +8,12 @@
     min-height: 1000px;
     // background-color: #333;
     display: flex;
+    margin-top: var(--default-layout-header-height);
 }
 .content {
     width: 1192px;
     min-height: 1000px;
+    background-color: #845f5f;
     // background-color: orange;
     // margin-top: -20px;
     // margin-left: 150px;

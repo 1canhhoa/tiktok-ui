@@ -1,13 +1,10 @@
 // import node module
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react';
-import TippyHeadless from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 import {
-    faCircleXmark,
-    faSpinner,
-    faMagnifyingGlass,
     faPlus,
     faEllipsisVertical,
     faLanguage,
@@ -15,34 +12,159 @@ import {
     faKeyboard,
     faMoon,
     faToggleOn,
-    faPaperPlane,
-    faBell,
     faUser,
     faBookmark,
     faLitecoinSign,
     faRightToBracket,
 } from '@fortawesome/free-solid-svg-icons';
-import { useEffect, useState } from 'react';
 // import file
 import Button from '~/components/Button';
-import { Wrapper as PopperWrapper } from '~/components/Popper';
 import image from '~/assets/images';
 import Styles from './Header.module.scss';
-import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu/index';
 import { IconInbox, UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
+import Search from '~/layouts/components/Search';
+import config from '~/configs';
 
 const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faLanguage} />,
         title: 'English',
         children: {
-            title: 'Language',
+            title: 'language',
             data: [
                 {
                     code: 'en',
                     title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Vietnam',
                 },
                 {
                     code: 'vi',
@@ -90,75 +212,24 @@ const USER_LOGIN = [
 const cx = classNames.bind(Styles);
 const currentUser = true;
 function Header() {
-    const [searchResult, setSearchResult] = useState([]);
-    useEffect(() => {
-        setTimeout(() => {
-            setSearchResult([]);
-        }, 0);
-    }, []);
     const handleManuChange = (menuItem) => {
         console.log(menuItem);
     };
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <div className={cx('logo')}>
+                {/* LOGO */}
+                <Link to={config.routes.home} className={cx('logo')}>
                     <img src={image.logo} alt="tiktok" />
-                </div>
-                <TippyHeadless
-                    interactive
-                    visible={searchResult.length > 0}
-                    render={(attrs) => (
-                        <div
-                            className={cx('search-result')}
-                            tabIndex={-1}
-                            {...attrs}
-                        >
-                            <PopperWrapper>
-                                <h4 className={cx('search-title')}>Accounts</h4>
-                                <AccountItem />
-                                <AccountItem />
-                                <AccountItem />
-                                <AccountItem />
-                                <h4 className={cx('text-result')}>
-                                    View all reasults for " "
-                                </h4>
-                            </PopperWrapper>
-                        </div>
-                    )}
-                >
-                    <div className={cx('search')}>
-                        <input
-                            placeholder="search accounts and videos"
-                            spellCheck={false}
-                        />
-                        <button className={cx('clear')}>
-                            <FontAwesomeIcon icon={faCircleXmark} />
-                        </button>
-                        <FontAwesomeIcon
-                            className={cx('loading')}
-                            icon={faSpinner}
-                        />
-
-                        <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
-                        </button>
-                    </div>
-                </TippyHeadless>
-                {/* chung action */}
+                </Link>
+                {/* SEARCH */}
+                <Search />
+                {/* ACTION */}
                 <div className={cx('action')}>
                     {currentUser ? (
                         // login
                         <>
-                            <Button
-                                outlineBlack
-                                leftIcon={
-                                    <FontAwesomeIcon
-                                        className={cx('faplus')}
-                                        icon={faPlus}
-                                    />
-                                }
-                            >
+                            <Button outlineBlack leftIcon={<FontAwesomeIcon className={cx('faplus')} icon={faPlus} />}>
                                 Up load
                             </Button>
                             <Tippy
@@ -168,7 +239,6 @@ function Header() {
                                 className={cx('tippy')}
                             >
                                 <button className={cx('faPaperPlane')}>
-                                    {/* <FontAwesomeIcon icon={faPaperPlane} /> */}
                                     <UploadIcon />
                                 </button>
                             </Tippy>
@@ -179,7 +249,6 @@ function Header() {
                                 className={cx('tippy')}
                             >
                                 <button className={cx('faBell')}>
-                                    {/* <FontAwesomeIcon icon={faBell} /> */}
                                     <IconInbox />
                                 </button>
                             </Tippy>
@@ -187,31 +256,20 @@ function Header() {
                     ) : (
                         // logup
                         <>
-                            <Button
-                                outlineBlack
-                                leftIcon={
-                                    <FontAwesomeIcon
-                                        className={cx('faplus')}
-                                        icon={faPlus}
-                                    />
-                                }
-                            >
+                            <Button outlineBlack leftIcon={<FontAwesomeIcon className={cx('faplus')} icon={faPlus} />}>
                                 Up load
                             </Button>
                             <Button primary>Log in</Button>
                         </>
                     )}
                     {/* chung menu */}
-                    <Menu
-                        items={currentUser ? USER_LOGIN : MENU_ITEMS}
-                        onChange={handleManuChange}
-                    >
+                    <Menu items={currentUser ? USER_LOGIN : MENU_ITEMS} onChange={handleManuChange}>
                         {currentUser ? (
                             // login
                             <Image
                                 alt="nguyenvana"
                                 className={cx('avatar')}
-                                src="https://vtv1.mediacdn.vn/zoom/640_400/2022/12/19/221218184732-messi-wc-trophy-16714338650611943125261-crop-1672061255342223645900.jp"
+                                src="https://vtv1.mediacdn.vn/zoom/640_400/2022/12/19/221218184732-messi-wc-trophy-16714338650611943125261-crop-1672061255342223645900.jpg"
                                 fallback={image.fallbackLogo}
                             />
                         ) : (
